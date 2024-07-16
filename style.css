@@ -653,7 +653,9 @@ body {
 }
 .cards-pages .page-active img {
   width: 90%;
+  max-width: 470px;
   height: auto;
+  max-height: 90%;
 }
 .cards-pages .page-active button {
   padding: 0.4em 0.4em;
