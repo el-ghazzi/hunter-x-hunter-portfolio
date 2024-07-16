@@ -12,6 +12,20 @@ const cardsPages = document.querySelector('.cards-pages')
 const cardsPagesDivs = cardsPages.querySelectorAll('div')
 const locations = document.querySelector('.locations')
 
+contactContent = document.querySelector('.contact-content')
+contactContentUl = contactContent.querySelector('ul')
+contactContentIls = contactContentUl.querySelectorAll('li')
+contactContentIls.forEach(li => {
+    li.addEventListener('click', function(event) {
+        if (! event.target.closest('a') ) {
+            const link = li.querySelector('a')
+            if (link) {
+                link.click()
+            }
+        }
+    })
+});
+
 function contentActive () {
     return document.querySelector('.content-active')
 }
@@ -522,14 +536,18 @@ imageContainer.addEventListener('dragover', function(e) {
 } )
 
 function createSoapEffect() {
-    imageContainer.appendChild(selectedSoap)
-    selectedSoap.classList.add('active-soap')
+    imageContainer.appendChild(soapImage)
+    soapImage.classList.add('active-soap')
     soapFoam.classList.add('soap-foam-active')
-    selectedSoap = null
 }
 
-imageContainer.addEventListener('drop', function(e) {
+imageContainer.addEventListener('drop', dropSoap)
+
+soapImage.addEventListener('dblclick', dropSoap)
+
+function dropSoap(e) {
       soapImage.setAttribute('draggable', 'false')
+      soapImage.removeEventListener('dblclick', dropSoap)
     if (uglyFace.classList.contains('face-off') === false) {
     createSoapEffect()
     setTimeout(fixThings, 5000)
@@ -546,7 +564,9 @@ imageContainer.addEventListener('drop', function(e) {
         deadpoolVideo.addEventListener('ended', lastScene)
         setTimeout(fixThings, 5000)
     }
-})
+}
+
+
 const skinCareCard = document.querySelector('.skin-care')
 const skinCareContent = document.querySelector('.skin-care-content')
 
@@ -572,7 +592,6 @@ soapContainer.addEventListener('dragover', function(e) {
 soapContainer.addEventListener('drop', function(e) {
     soapImage.classList.remove('active-soap')
      soapContainer.appendChild(soapImage)
-      selectedSoap = null
 } )
 
 function fixThings() {
@@ -580,7 +599,7 @@ function fixThings() {
     soapFoam.classList.remove('soap-foam-active')
     soapContainer.appendChild(soapImage)
     soapImage.setAttribute('draggable', 'true')
-    selectedSoap = null
+    soapImage.addEventListener('dblclick', dropSoap)
     if(uglyFace.classList.contains('face-off') === false) {
      uglyFace.classList.add('face-off')
      freshFace.classList.remove('face-off')

@@ -652,8 +652,8 @@ body {
   gap: 3%;
 }
 .cards-pages .page-active img {
-  width: auto;
-  height: 95%;
+  width: 90%;
+  height: auto;
 }
 .cards-pages .page-active button {
   padding: 0.4em 0.4em;
