@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Shadows+Into+Light&display=swap"
+      rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/e2d8f37555.js"
+      crossorigin="anonymous"></script>
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <div class="book">
+      <div class="cover">
+        <div class="front-cover">
+          <h2>The Book</h2>
+          <div class="container">
+            <div class="spin-container">
+              <span class="down-span"> </span>
+              <span class="left-span"> </span>
+              <span class="up-span"> </span>
+              <span class="right-span"> </span>
+              <span class="middle-span"></span>
+              <div class="empty-circle"></div>
+            </div>
+          </div>
+          <p>HUNTER x HUNTER</p>
+        </div>
+        <div class="back-cover"></div>
+      </div>
+      <div class="inside">
+        <div class="back-inside">
+          <div class="slot slot-one">
+            <img
+              draggable="true"
+              class="card-images detailed-map"
+              src="images/Map of the Island (detailed).png"
+              alt="" />
+
+            <div class="circle"></div>
+          </div>
+          <div class="slot slot-two">
+            <img
+              draggable="true"
+              class="card-images magnetic-force"
+              src="images/Magnetic Force.png"
+              alt="" />
+            <div class="circle"></div>
+          </div>
+          <div class="slot slot-three">
+            <img
+              draggable="true"
+              class="card-images contact"
+              src="images/Contact.png"
+              alt="" />
+
+            <div class="circle"></div>
+          </div>
+          <div class="slot slot-four">
+            <img
+              draggable="true"
+              class="card-images origin"
+              src="images/Origin.png"
+              alt="" />
+            <div class="circle"></div>
+          </div>
+          <div class="slot slot-five">
+            <img
+              draggable="true"
+              class="card-images skin-care"
+              src="images/Skin Care.png"
+              alt="" />
+
+            <div class="circle"></div>
+          </div>
+          <div class="slot slot-six">
+            <img
+              draggable="true"
+              class="card-images hyper-puffball"
+              src="images/Hyper Puffball.png"
+              alt="" />
+            <div class="circle"></div>
+          </div>
+          <div class="slot slot-seven">
+            <img
+              draggable="true"
+              id="myImage"
+              class="card-images golden-dictionary"
+              src="images/Golden Dictionary.png"
+              alt="" />
+            <div class="circle"></div>
+          </div>
+          <div class="slot slot-eight">
+            <img
+              draggable="true"
+              class="card-images imp-wink"
+              src="images/Imp's Wink.png"
+              alt="" />
+            <div class="circle"></div>
+          </div>
+          <div class="slot slot-nine">
+            <div class="circle"></div>
+          </div>
+        </div>
+        <div class="front-inside">
+          <div class="container-one">
+            <div class="screen">
+              <div class="cards-content">
+                <div class="magnetic-force-content">
+                  <p>FLY TO THE SECTION OF PORTFILIO YOU SPECIFY.</p>
+                  <button>USE THE CARD</button>
+                  <ul>
+                    <li class="about">ABOUT</li>
+                    <li class="resume">RESUME</li>
+                    <li class="projects">PROJECTS</li>
+                    <li class="start-point">START POINT</li>
+                    <button>BACK</button>
+                  </ul>
+                </div>
+                <div class="contact-content">
+                  <p>ALLOWS ACCESS TO MY CONTACT DEATAILS.</p>
+                  <button>USE THE CARD</button>
+                  <ul>
+                    <li>
+                      <a href="www.facebook.com" target="_blank">
+                        <i class="fa-brands fa-facebook-f"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="www.linkdin.com" target="_blank">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="www.twitter.com" target="_blank">
+                        <i class="fa-brands fa-x-twitter"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="www.github.com" target="_blank"
+                        ><i class="fa-brands fa-github"></i>
+                      </a>
+                    </li>
+                    <button>BACK</button>
+                  </ul>
+                </div>
+                <div class="imp-wink-content">
+                  <p>
+                    YOU WILL EXPERIENCE THE MOST AMAZING ECSTASY WHEN SHE WINKS
+                    AT YOU
+                  </p>
+                  <button>USE THE CARD</button>
+                </div>
+                <div class="hyper-puffball-content">
+                  <p>
+                    A FAST MOVING BALL-SHAPED ANIMAL, CATCH HIM IF YOU DARE.
+                  </p>
+                  <button>Use the card</button>
+                </div>
+                <div class="skin-care-content">
+                  <p>A HOT, GOLDEN SPRING FOR SILKY-SMOOTH SKIN</p>
+                  <button>Use the card</button>
+                </div>
+                <div class="golden-dictionary-content">
+                  <p>QUOTES GLOWING WITH WISDOM TO INSPRE YOUR JOURNEY.</p>
+                  <button>Use the card</button>
+                  <!-- <ul>
+                    <li>
+                      <i class="fa-solid fa-quote-left"></i>
+                      <p class="quote-text"></p>
+                      <p class="quote-author"></p>
+                      <i class="fa-solid fa-quote-right"></i>
+                    </li>
+                    <button>BACK</button>
+                  </ul> -->
+                </div>
+                <div class="detailed-map-content">
+                  <p>PROVIDES A DETAILED MAP OF THE PORTFOLIO.</p>
+                  <button>Use the card</button>
+                </div>
+                <div class="origin-content">
+                  <p>ALLOWS THE PLAYER TO RETURN TO THE STARTING POINT.</p>
+                  <button>Use the card</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-two">
+            <div class="card-select" id="card-select">
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cards-pages">
+        <div class="hyper-puffball-page">
+          <button class="start">START/RESTART</button>
+          <div class="puffball-container"></div>
+          <button class="back">YOU WANNA GIVE UP LOSER!</button>
+        </div>
+        <div class="detailed-map-page">
+          <img src="images/detailed-map.jpg" alt="" />
+          <button class="back">Back</button>
+        </div>
+      </div>
+      <div class="locations">
+        <div class="projects">
+          <div class="squares-container"></div>
+          <div class="dragon">
+            <img src="images/ClipInk Chinese dragon.svg" alt="" />
+          </div>
+          <div class="projects-main">
+            <h2>Projects</h2>
+            <div class="projects-container">
+              <div class="project-card">
+                <div class="text">
+                  <p class="title">Janah Road</p>
+                  <p class="description">
+                    A web app designed to help you stay on the righteous path to
+                    reach Janah, Inshallah
+                  </p>
+                </div>
+                <div class="tech-stack">
+                  <p>
+                    Tech Stack: <span><i class="fa-brands fa-html5"></i></span>
+                    <span><i class="fa-brands fa-css3-alt"></i></span>
+                    <span><i class="fa-brands fa-js"></i></span>
+                  </p>
+                </div>
+              </div>
+              <div class="project-card">
+                <div class="text">
+                  <p class="title">Qalam</p>
+                  <p class="description">
+                    A web app designed to assist in creating stories and
+                    screenplay scripts.
+                  </p>
+                </div>
+                <div class="tech-stack">
+                  <p>
+                    Tech Stack: <span><i class="fa-brands fa-html5"></i></span>
+                    <span><i class="fa-brands fa-css3-alt"></i></span>
+                    <span><i class="fa-brands fa-js"></i></span>
+                  </p>
+                </div>
+              </div>
+              <div class="project-card">
+                <div class="text">
+                  <p class="title">BIWI</p>
+                  <p class="description">
+                    This website for an imaginary restaurant.
+                  </p>
+                </div>
+                <div class="tech-stack">
+                  <p>
+                    Tech Stack: <span><i class="fa-brands fa-html5"></i></span>
+                    <span><i class="fa-brands fa-css3-alt"></i></span>
+                    <span><i class="fa-brands fa-js"></i></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <button class="back"><span>BACK</span></button>
+          </div>
+        </div>
+        <div class="about">
+          <div class="squares-container"></div>
+          <div class="dragon">
+            <img src="images/ClipInk Chinese dragon.svg" alt="" />
+          </div>
+          <div class="about-main">
+            <h1>About</h1>
+            <div class="about-container">
+              <div class="about-card">
+                <div class="text">
+                  <p class="description"></p>
+                </div>
+              </div>
+            </div>
+            <button class="back">BACK</button>
+          </div>
+        </div>
+        <!-- <div class="about">
+          <h2>About</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis
+            possimus eius aliquam rerum nam! Eveniet eaque error accusamus autem
+            expedita!
+          </p>
+          <button>BACK</button>
+        </div> -->
+        <div class="resume">
+          <h2>Resume</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis
+            possimus eius aliquam rerum nam! Eveniet eaque error accusamus autem
+            expedita!
+          </p>
+          <button>BACK</button>
+        </div>
+        <!-- <div class="projects">
+          <h2>Projects</h2>
+          <button>BACK</button>
+        </div> -->
+      </div>
+      <div class="skin-care-container">
+        <div class="copy-container">
+          <h3></h3>
+        </div>
+        <div class="main-container">
+          <div class="soap-container">
+            <img
+              draggable="true"
+              class="soap-img"
+              src="images/soap.png"
+              alt="" />
+          </div>
+          <div class="img-container">
+            <img class="ugly-face" src="images/ugly-face.png" alt="" />
+            <img
+              class="fresh-face face-off"
+              src="images/fresh-face.png"
+              alt="" />
+            <img class="deadpool face-off" src="images/deadpool.png" alt="" />
+            <img class="soap-foam" src="images/soap-foam.png" alt="" />
+          </div>
+          <div class="video-container">
+            <video src="videos/go-home.mp4" type="video/mp4"></video>
+            <span class="off">BIWI CAN!</span>
+          </div>
+        </div>
+      </div>
+      <div class="quotes-container">
+        <div class="paper-plane-container">
+          <audio src="audios/Paper-Plane-voice.mp3"></audio>
+          <img src="images/paper-plane.png" alt="" />
+          <div class="btn-off"></div>
+        </div>
+        <div class="paper-page-container">
+          <div class="paper-page">
+            <div class="text-container">
+              <i class="fa-solid fa-quote fa-quote-left"></i>
+              <h3 class="quote-text"></h3>
+              <p class="quote-author"></p>
+              <i class="fa-solid fa-quote fa-quote-right"></i>
+            </div>
+          </div>
+          <div class="btn-on"></div>
+        </div>
+        <button class="back">Back</button>
+      </div>
+    </div>
+  </body>
+  <!-- <script src="main.js"></script> -->
+</html>
