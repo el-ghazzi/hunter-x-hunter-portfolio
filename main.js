@@ -313,7 +313,7 @@ for (slot of slots) {
         if (e.target.querySelector('.card-images') === null 
         && e.target !== selected 
         && e.target.classList.contains('card-images') === false ) { 
-            console.log(e.target)
+            
         const currentContent = document.querySelector(`.${selected.classList.value.split(' ')[1]}-content`)
         if (currentContent !== null) {
             currentContent.classList.remove(`content-active`)
@@ -324,11 +324,6 @@ for (slot of slots) {
         }
     })
 }
-
-
-
-
-
 
 
 
@@ -374,7 +369,6 @@ function epmtySlots () {
         }
     }
 }
-
 epmtySlots()
 function control() {
   const a = Math.floor( Math.random() * 4 ) + 1
@@ -405,11 +399,8 @@ function control() {
     } 
     return puffballIndex
 }
-
 const puffballP = document.createElement('p')
 puffballP.textContent = 'GAME OVER YOU WON!'
-
-
 function move() {
      const currentPuffBall = document.querySelector('.puffball')
      const ha = puffballContainer.querySelectorAll('.empty-slot')[control()]
@@ -428,13 +419,9 @@ function move() {
                       }       
                     })
 }
-
 let timerId
-
 const puffballStart = puffballPage.querySelector('.start')
-
 puffballStart.addEventListener('click', startGame)
-
 function startGame() {
     console.log('start game')
        clearInterval(timerId)
@@ -452,11 +439,13 @@ function startGame() {
   document.querySelector('.puffball').style = 'transform: rotateY(0deg);'
                     timerId = setInterval(move, 250)
 }
-
 puffballPage.querySelector('.back').addEventListener('click', function() {
     startGame()
     clearInterval(timerId)
 })
+
+
+
 
 
 
@@ -505,7 +494,7 @@ function start() {
     deadpoolFace.classList.add('face-off')
     freshFace.classList.add('face-off')
     videoContainer.style.background = 'black'
-},  16000)
+},  8500)
 }
 
 function loadCopy() {
@@ -521,7 +510,7 @@ function loadCopy() {
         }
         }
 
-let intervalTime = 1000
+let intervalTime = 700
 let soapTimerId 
 
 
@@ -550,10 +539,10 @@ function dropSoap(e) {
       soapImage.removeEventListener('click', dropSoap)
     if (uglyFace.classList.contains('face-off') === false) {
     createSoapEffect()
-    setTimeout(fixThings, 5000)
+    setTimeout(fixThings, 2200)
     } else if (freshFace.classList.contains('face-off') === false) {
     createSoapEffect()
-    setTimeout(fixThings, 5000)
+    setTimeout(fixThings, 2200)
     } else {
         imageContainer.style.display = 'none'
         soapContainer.style.display = 'none'
@@ -582,7 +571,7 @@ function lastScene() {
                document.querySelector('.inside').classList.toggle('inside-active')
                findEmptySlot().appendChild(skinCareCard)
                skinCareContent.classList.remove(`content-active`)
-            }, 5000)
+            }, 2000)
         }
 
 
@@ -599,7 +588,7 @@ function fixThings() {
     soapFoam.classList.remove('soap-foam-active')
     soapContainer.appendChild(soapImage)
     soapImage.setAttribute('draggable', 'true')
-    soapImage.addEventListener('dblclick', dropSoap)
+    soapImage.addEventListener('click', dropSoap)
     if(uglyFace.classList.contains('face-off') === false) {
      uglyFace.classList.add('face-off')
      freshFace.classList.remove('face-off')
@@ -621,7 +610,7 @@ const about = locations.querySelector('.about')
 const aboutCard = document.querySelector('.about-card')
 const description = aboutCard.querySelector('.description')
 const dragon = about.querySelector('.dragon')
-console.log(dragon)
+
 const descriptionText = `Hello! I'm Youssef ELGhazzi, a passionate and self-taught front-end developer with a knack for crafting seamless and engaging user experiences. My journey into web development began out of pure curiosity and a desire to understand how websites work.`
 const descriptionTextArray = descriptionText.split(' ') 
 const aboutSquaresContainer = about.querySelector('.squares-container')
@@ -699,7 +688,6 @@ function endAbout() {
     clearInterval(aboutTimerId)
     aboutCurrentIndex = 0
     description.textContent = ''
-    console.log('haah')
     aboutCard.style = `background: transparent;
                              box-shadow: none;`
         dragon.style.display = 'none' 
