@@ -1408,7 +1408,7 @@ body {
   width: var(--paper-width);
   height: var(--paper-height);
   margin: 0 auto;
-  background: url(images/paper-page.png);
+  background: url(images/paper-page.webp);
   background-size: cover;
   align-self: center;
 }

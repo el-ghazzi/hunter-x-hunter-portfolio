@@ -1,4 +1,4 @@
-document.querySelector('.front-cover').addEventListener('dblclick', function() {
+document.querySelector('.front-cover').addEventListener('click', function() {
     document.querySelector('.inside').classList.toggle('inside-active')
     document.querySelector('.front-cover').classList.toggle('front-cover-off')
 })
@@ -54,7 +54,7 @@ function findEmptySlot() {
             }
 }
 
-cardSelect.addEventListener('dblclick', function(e) {
+cardSelect.addEventListener('click', function(e) {
     const classList = '.' + e.target.classList.value.split(' ')[1]
     const currentContent = document.querySelector(classList + '-content')
      if (cardSelect.querySelector('.card-images') !== null) {
@@ -78,7 +78,7 @@ function fixContent(currentContent) {
 
 for (image of images) {
     if (image.parentElement.classList.contains('slot')  ) {
-        image.addEventListener('dblclick', function(e) {
+        image.addEventListener('click', function(e) {
             const classList = '.' + e.target.classList.value.split(' ')[1]
             if (cardSelect.querySelector('.card-images') === null) {
                  cardSelect.appendChild(e.target)
@@ -543,11 +543,11 @@ function createSoapEffect() {
 
 imageContainer.addEventListener('drop', dropSoap)
 
-soapImage.addEventListener('dblclick', dropSoap)
+soapImage.addEventListener('click', dropSoap)
 
 function dropSoap(e) {
       soapImage.setAttribute('draggable', 'false')
-      soapImage.removeEventListener('dblclick', dropSoap)
+      soapImage.removeEventListener('click', dropSoap)
     if (uglyFace.classList.contains('face-off') === false) {
     createSoapEffect()
     setTimeout(fixThings, 5000)
